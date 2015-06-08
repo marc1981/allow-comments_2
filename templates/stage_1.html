@@ -1,0 +1,114 @@
+{% extends "base_form.html" %}
+
+{% block content %}
+      
+      <div class="stage_element_box_1">    
+            <div class="stage_title_box_1">
+                <a id="top_of_stage_one"></a>
+                <h2 class="subtitle">Stage 1: Creating a Webpage</h2>
+            </div>
+      </div>
+			<div class="lesson_elements">
+				<div class="lesson_title">                    
+					Lesson 1: The Basics of the Web and HTML
+				</div>
+				<div class="lesson_material">
+				
+					<span class="style1">HTML stands for <u>H</u>yper<u>T</u>ext <u>M</u>arkup <u>L</u>anguage.</span><br><br>
+					The World Wide Web, or simply the Web, is made up of a vast collection of HTML documents. What exactly is HTML? Good Question. <br>
+					The <em>HyperText</em> in HTML refers to the <em>hyperlinks</em> that connect documents across the Web. Here is an example of a hyperlink that will take<br>
+  					to a site with more information on hyperlinks: <a href="http://en.wikipedia.org/wiki/Hyperlink" target=_blank>Wikipedia Entry on Hyperlinks</a><br><br>
+
+  					The <em>Markup Language</em> component of HTML refers to the language that web documents are written with. I know; there's a lot of self-referential verbiage going on here, but I couldn't think of a better way to phrase things.<br><br>
+        			HTML is the basic language for web design and is written using tags which are enclosed in angle brackets. Here is an example of a tag:<br><br> <span class="element_box">&lt;img&gt;</span>
+        			<br><br>
+
+      				Tags are a component of HTML elements, and elements are used to do everything from:
+      				<ul>
+        				<li>altering the appearance of <b>text</b></li>
+        				<li>adding images to a page</li>
+        				<li>including <dfn title="hyperlinks connect one web page to another">hyperlinks</dfn></li>
+        				<li>changing the background color</li>
+        				<li>and much more.</li>
+      				</ul>
+
+      				Here is an example of a generic element:<br><br> <span class="element_box">&lt;tag attribute="value"&gt;content, content, content&lt;/tag&gt;</span><br><br>
+      				As you can see, within an element a tag can contain an attribute which has an assigned value. Between the opening and closing tags<br> is the content that is modified.
+      				Let's look at a "real" example of an element:<br><br>
+        			<span class="element_box">&lt;a href="www.google.com"&gt;The Search Engine That Controls the World&lt;/a&gt;</span><br><br>
+        			On the web, this would show up as:<br>
+        			<a href="http://www.google.com">The Search Engine That Controls the World</a><br><br>
+        			Go ahead and click on the link to find the answer to almost any question.
+      				
+      				<hr class="lesson_break">
+      				<p class="element_box">IMPORTANT THINGS TO REMEMBER:<br> 
+  					For the most part, computers obey simple logic and are very sensitive to typos and other coding errors.<br>
+  					For example, if you leave off a closing tag such as&lt;/em&gt;, everything after the opening tag (&lt;em&gt;) will be italicized.
+  					</p>
+  					<hr class="lesson_break">
+
+      				<p><span class="style1">HTML is a structured language</span><br><br>
+        			When we say HTML is structured, we mean that an element can contain other elements. An example should clear this up.<br>
+        			Say you had the following element:<br><br>
+        			<span class="style2">
+        			&lt;h2&gt;This is a short sentence.&lt;/h2&gt;</span><br><br>
+        			Now say you wanted to make the word "sentence" bold.
+        			The element becomes:<br><br> <span class="style2"> &lt;h2&gt;This is a short <b>&lt;b&gt;sentence&lt;/b&gt;</b>&lt;/h2&gt;</span><br><br>
+					If you wanted to make the words "short sentence" italic the element would be:<br><br> <span class="style2">
+					&lt;h2&gt;This is a <i>&lt;i&gt;short <b>&lt;b&gt;sentence&lt;/b&gt;</b>&lt;/i&gt;</i>&lt;/h2&gt;</span><br><br>
+        			<br>
+        			As you can see there are elements nested inside other elements.<br>
+        			Besides being nested, elements can be either inline or block. Naturally, an inline element does not separate its content from<br>
+        			its surroundings, while a block element does separate itself. You can think of a block element as having a box around it.<br>
+        			</p>
+                    <p class="center_p"><a href="#top_of_stage_one">Back to the beginning of Stage 1</a></p>
+        		</div>
+        		<div class="lesson_title">
+        			Lesson 2: Webpages, Documents, and Structure
+        		</div>
+        		<div class="lesson_material">
+        			<span class="style1">HTML, CSS, and Javascript</span><br><br>
+					HTML, CSS, and Javascript are all languages. We have all ready been introduced to HTML, but let's review it along with the others. 
+ 					<ul>
+   						<li>HTML <i>(HyperText Markup Language)</i> provides the basic structure of a webpage.</li>
+   						<li>CSS <i>(Cascading Style Sheet)</i> provides style or design.</li>
+   						<li>Javascript provides interactive elements.</li>
+  					</ul>
+					
+					More Information:<br><br>
+					
+					<span class="style1">HTML</span><br>
+  					As we know, HTML is written in tags. A browser puts these tags in a tree-like structure using something called a <u>D</u>ocument <u>O</u>bject <u>M</u>odel (DOM).<br><br>
+ 					
+ 					<span class="style1">DOM</span><br>
+					a standard convention for representing and interacting with objects written in HTML; <br>
+					an Application Programming Interface (API) that defines a document's structure and the way it is accessed and manipulated. <br><br>
+					
+					<span class="style1">CSS</span><br>
+					CSS is a language that is used to describe the look and formatting of a document written in a markup language such as HTML.<br/>
+					HTML can provide a browser instructions on what CSS style to use and where it can be accessed.<br><br>
+
+					<hr class="lesson_break">
+
+					<span class="style1">Webpage Structure</span>
+					<br><br>
+					The structure of a webpage is considered tree-like because it has many branching elements.<br>
+						
+						<div class="tree_structure"><img src="images/htmltree.png" alt="You should be seeing an image of tree structure.">
+						</div>
+			
+					<br>A tree structure is a way of representing the heirarchical nature of a system.<br>
+					All elements in a webpage's structure are rectangular.<br>
+					These rectangular elements can be made to appear differently by changing the styling that
+					is applied to them.<br>
+					Rectangular elements can be easily rearranged and nested within one another.<br>
+					These boxes (rectangular elements) can be defined using the &lt;div&gt; tag.<br>
+					Finally, class attributes are used as labels for element boxes and should have meaningful ids.<br><br>
+                    <p class="ts"><a href="#top_of_stage_one">Back to the beginning of Stage 1</a></p>	
+
+      </div>
+    </div>
+    <p class="ts">
+    <a href="\"><img src="images/home.jpg" width="50" alt="This is the link to the home page."><br>Back to home page.</a>
+    </p>
+{% endblock %}

@@ -1,0 +1,245 @@
+{% extends "base_form.html" %}
+
+{% block content %}
+
+<div>   
+    <div class="stage_element_box">
+        <a id="begin_stage2"></a>
+        <div class="stage_title_box">
+            <h2 class="subtitle">Stage 2: Telling Computers What To Do</h2>
+
+        </div>
+    </div>
+    <div class="stage2_elements">
+        <div class="stage2_title">
+            Lesson 0: Intro to Programming Languages
+        </div>
+        <div class="stage2_material">
+            <span class="style1">Computing Basics</span><br><br>
+            This lesson offered a brief overview of the way computers operate and how programming languages can be used to perform basic computations.<br><br>
+            Here are some of the key terms that were discussed along with their definitions.<br>
+            <!--list that contains:
+                computer
+                program
+                programming languages
+                interpreter
+                Python
+                grammar
+                Python expressions-->
+            <div class="python_logo"><img src="images/Python_logo_and_wordmark.svg.png" alt="The Python logo is a pair of intertwined snakes. Presumably, the snakes are pythons">
+            </div>
+            <ul>
+                <li><u>computer:</u> a general purpose devise that can be programmed to do something</li>
+                <li><u>program:</u> a sequence of instructions (written in a specific language) that a computer follows</li>
+                <li><u>programming languages:</u> formally constructed ways of writing instructions so that a computer can follow them</li>
+                <li><u>interpreter:</u> a computer program that executes (<em>carries out</em>) another program written in a programming language</li>
+                <li><u>Python:</u> a high level programming language with relatively simple syntax that was designed to reduce the number of lines of code needed to write a program</li>
+                <li><u>grammar:</u> programming language rules that must be followed in order for written code to function properly; generally specific to the type of programming language being used</li>
+                <li><u>Python expressions:</u> a line of code that contains some combination of values, variables, and operators; e.g. a mathematical equation
+                <ul>
+                    <!--sublist containing: value, variable, operator-->
+                    <li><u>value:</u> data belonging to a particular type, i.e. integers, strings, etc.</li>
+                    <li><u>variable:</u> a name that refers to a value</li>
+                    <li><u>operator:</u> a computational symbol</li>
+                </ul>
+                </li>
+            </ul>
+            <div class="python_logo_references">
+                <a href="http://commons.wikimedia.org/wiki/File:Python_logo_and_wordmark.svg#mediaviewer/File:Python_logo_and_wordmark.svg">Python logo and wordmark</a>" by www.python.org - <a rel="nofollow" class="external free" href="https://www.python.org/community/logos/">https://www.python.org/community/logos/</a>. Licensed under <a href="http://www.gnu.org/licenses/gpl.html" title="GNU General Public License">GPL</a> via <a href="//commons.wikimedia.org/wiki/">Wikimedia Commons</a>.
+            </div>
+            <br>
+            <p class="ts"><a href="#begin_stage2">Back to the beginning of Stage 2</a></p>
+        </div>
+            <div class="more_python">
+                <div class="stage2_title">
+                    Lessons 1 &amp; 2: The Basics of Working With Python<br> 
+                    <div class="lessons2_3">Variables and Strings<br>
+                    &amp;<br>
+                    Input &raquo; Function &raquo; Output
+                    </div>
+                </div>
+                <div class="stage2_material">
+                    <span class="style1">The "Grammar" of the Python Programming Language</span><br><br>
+                    The Python Programming Language is similar to other languages (C++, Java), yet there are some crucial differences.<br>
+                    <br>
+                    Before delving into the details however, let's take a look at some of the basics of Python.
+                    <br>
+                    We mentioned the concepts of values, variables, and operators, but it is worth reviewing them in more detail.
+                    <br>
+                    <ul>
+                        <li><u>Value:</u> In Python, a value is a piece of data that belongs to a particular type. For example, there are:
+                        <ul>
+                            <li>Integers (<em>int</em>)</li>
+                            <li>Floating Point Numbers (<em>float</em>)</li>
+                            <li>Strings (<em>str</em>)</li>
+                            <li>etc.</li>
+                        </ul>
+                        One thing to keep in mind is that value types matter when working with data. <span style="background-color: #D8D8D8">2 + 2</span> is <u><em>not</em></u> equivalent to <span style="background-color: #D8D8D8">'2' + '2'</span><br>
+                        The first evaluates to 4. The second evaluates to '22'. Why?<br>This is because 2 (without quotations) is interpreted as an integer, while '2' (with quotations) is interpreted as a character in a string. 
+                        </li>
+                        <li><u>Variable:</u> In Python, a variable can be thought of as the name assigned to a value.<br> For example, the integer (int) 6 can be assigned the name "number_of_sides_on_dice"<br>
+                        The integer 6 is the value. The name is the variable.<br>
+                        In terms of code, it looks like this: <em>number_of_sides_on_dice = 6</em>
+                        <ul>
+                        <li>Variables allow programmers a way to easily recognize the meaning of a particular value.</li>
+                        <li>In the previous example the number '6' could mean a multitude of things, but by naming it with a variable (<em>number_of_sides_on_dice</em>) it becomes understood what it meant.</li>
+                        <li>Variables can be reassigned. Say you had a weird dice with eight sides. Then you could do this: <br>
+                        <em>number_of_sides_on_dice = number_of_sides_on_dice + 2</em><br>Now <em>number_of_sides_on_dice = 8</em><br>
+                        See? No problem.</li>
+                        </ul>
+                        <li><u>Operator:</u> Without going into much detail, an operator is a symbol used in computation.<br> Multiplication (*), Division (/), Addition (+), Subtraction (-), Modulo (%), Exponential (**), etc.<br> <span style="background-color: #FFFF00">As an additional note, in Python the ' = ' sign represents <em>'assignment'</em> and <u>not</u> 'equal to.' In order to idicate <em>'equivalency'</em> you must use the ' == ' symbol.</span></li>
+                    </ul>
+                    <br>
+                    Python has a certain structure in the way it is written.
+                    Instead of using brackets like C++, complete functions or blocks of code are indicated by indenting the lines of code. You can see this in the screenshot below.<br>
+                    <div class="screenshot"><img src="images/python_code_screen.png" alt="Screenshot of python code.">
+                    </div>
+                    So what exactly is a function? Well... it depends. In the Python language, <b>a function is a block of code that performs a task.</b><br>
+                    <br>For example, <div class="function"><img src="images/function.png" alt="Example of a function."></div>
+                    is a function that returns the sum of two numbers that the user enters.<br><br>
+                    Another way of understanding functions is to think of a function as a <b>statement that takes some type of <em>input</em> and produces some type of <em>output</em>.</b><br>
+                    The <em>return</em> part of the function is necessary to produce the output.<br><br>
+                    <div class="recycle_text">
+                        One thing that should be apparent is that the same function can be used over and over again. <br> Since a function can accommodate a range of different inputs (depending on the input type), it can produce a range of outputs. 
+                        <div class="recycle"><img src="images/recycle.png" alt="Recycle symbol."></div>
+                    </div>
+                    <p class="ts"><a href="#begin_stage2">Back to the beginning of Stage 2</a></p>
+                </div>
+            </div>
+            <!--Beginning Lesson 3-->
+            <div class="stage2_title">
+                    Lessons 3: Decisions and Repetition: If and While
+            </div>
+            <div class="stage2_material">
+                <span class="style1">Making Decisions in Python: The Use of <em>If &amp; Else</em></span><br><br>
+                <em>If</em> statements are fairly common in programming languages and are used in decision making.<br>Sometimes they will be referred to as <em>if-else</em> statements because the two are usually paired together.<br><br>If-else statements are <em>conditional statements</em>; if 'x' then 'y'. In other words, if some <em>condition</em> is met then the program will do something.<br> If the condition is not met, the program will do something else. <br><br>
+                <div class="if_else_images">In Python, if-else statements take the following form:</div>
+                
+                <div><img class="if_else" src="images/if_else.png" alt="This is an example of an if - else function."></div>
+                <hr class="image_break">
+                <hr class="image_break2">
+                <div class="if_else_images">Here's another example:</div>
+                <div><img class="if_else2" src="images/if_else2.png" alt="This is another example of an if - else function."></div><br>
+        <!--WHILE LOOPS-->
+            <hr class="lesson_break2">
+                <span class="style1">Repition/Iteration in Python: The Use of <em>While Loops</em></span><br><br>
+                <em>While loops</em> are iterative functions that are also fairly common in programming languages. 
+                <br>By iterative, we mean that a while loop can repeat (hence, the term "loop") until some condition is met.
+                <br>For example, say we wanted to have an ouput of a sequence of numbers going from 0 to 7.
+                <br>First we need to assign some variable, let's call it <em>n</em>, equal to our starting value of 0.<br><br>
+                <span class="while">n = 0</span><br>
+                Next we need to create the while loop function. It looks like this:<br>
+                <span class="while">while(n &lt;= 7):</span><br>
+                
+                Now we need to tell the function to do something:
+                <span class="while">print (n)</span><br>
+                Finally we need to increment <em>n</em> by 1:
+                <span class="while">n = n + 1</span><br>
+                All together, the loop looks like this:<br>
+                <p class="while_loop">n = 0</p>
+                <p class="first_line_indent">while(n &lt;= 7):</p>
+                <p class="function_indent">print (n)</p>
+                <p class="function_indent">n = n + 1</p><br>
+                For this example, the output is simply this:
+                <span class="output">0<br>
+                    1<br>
+                    2<br>
+                    3<br>
+                    4<br>
+                    5<br>
+                    6<br>
+                    7<br>
+                </span>
+                    <br>
+                <p class="ts"><a href="#begin_stage2">Back to the beginning of Stage 2</a></p>
+
+            </div>
+            <!--div point before exiting lesson3-->     
+            <div class="stage2_title">
+                    Lessons 4: Structured Data: Lists and For Loops
+            </div>
+            <div class="stage2_material">
+                <span class="style1"><em>Lists</em></span><br><br>
+                Lists are type of structured data that, as the name implies, store values in a... wait for it... a list!<br>They are said to be mutable, because lists can be changed after they are created yet they retain their original ID value ( id(list) is the same after change).<br><br>
+                In Python, lists are created using [ ]. For example:
+                <span class="list">['apples', 'oranges', 'pears', 'grapes', 'kiwis']</span><br>
+                Lists can contain strings, numbers, or a combination of the two. For example:
+                <span class="list">['dalmations', 101, 'disney']</span><br>
+                In addition, lists can be concatentated using the + operator.
+                <span class="list2">greetings_1 = ['hey', 'yo', 'how ya doin']</span>
+                <span class="list2">greetings_2 = ['hello', 'good day to you', 'greetings dear sir']</span>
+                <span class="list2">greetings_3 = greetings_1 + greetings_2</span>
+                <span class="list2">print greetings_3</span>
+                <span class="list3">['hey', 'yo', 'how ya doin', 'hello', 'good day to you', 'greetings dear sir']</span><br>
+                And the traits just keep coming! Lists can be nested within other lists.
+                <span class="list">warning = ['objects', 'mirror', ['closer', 'appear']]</span><br>
+                Indexing the previous list looks like this:
+                <span class="list2">print warning[1]</span>
+                <span class="list3">mirror</span>
+                <span class="list2">print warning[2]</span>
+                <span class="list3">['closer', 'appear']</span><br>
+                
+                You can add items to a list using list_name.append('item to be added')<br>
+                And you can find the number of items in a list using len(list_name)<br><br>
+
+                <hr class="lesson_break2"><br>
+                <span class="style1"><em>For Loops</em></span><br><br>
+                <em>For Loops</em> allow for iteration over a sequence. Basically, this means that the loop will "run through"<br>
+                a sequence until it is "told" to stop. An example should clear things up.<br><br>
+                Say you wanted to print out all the elements of a list, one at a time.<br>
+                Let's call our list <em>our_list</em> and give it these elements: 1, 2, 3, 4, 5.
+                <span class="list_narrow">our_list = [1,2,3,4,5]</span><br>
+                If we just said "print our_list" it would look like this:
+                <span class="list_narrow">print our_list</span>
+                <span class="list_no_top">[1,2,3,4,5]</span><br>
+                Obviously, this is not what we wanted.<br>
+                Now let's use a <em>for loop</em>.
+                <p class="first_line_indent">def our_loop(p):</p>
+                <p class="first_line_indent2">for e in p:</p>
+                <p class="function_indent2">print (e)</p>
+                <span class="first_line_indent">1</span>
+                <span class="first_line_indent">2</span>
+                <span class="first_line_indent">3</span>
+                <span class="first_line_indent">4</span>
+                <span class="first_line_indent">5</span><br>
+                Now, at this point you may be wondering what is the point of all of these <em>loops</em> and <em>ifs</em> and <em>whiles</em>.<br> The truth is, I HAVE NO CLUE!<br>
+                <em>Hey, print out some numbers!!!</em> AWESOME!!!<br>
+                <em>Look at this! Find the position of a number!!!</em> Fantastic!!!<br>
+                It's tough to write notes about a subject matter that seems so arbitrary and downright pointless.<br>
+                Look, I know you have crawl before you can walk, but come on.<br>
+                Much more of this, and I'm packing it up for good.<br>
+                But I digress.<br>
+                <p class="ts"><a href="#begin_stage2">Back to the beginning of Stage 2</a></p>
+            </div>
+            <!--Section break for summary-->
+            <div class="stage2_title">
+                    Stage 2 Summary
+            </div>
+            <div class="stage2_material">
+                <span class="style1">Review of the Material Covered</span><br>
+                <ul>
+                    <li><u>Variable</u>: a name assigned to a value; allows for easy recognition of the meaning of a value; can be reassigned to other values.</li>
+                    <li><u>Functions</u>: blocks of code that performs a task; a statement that takes some type of input and produces some type of output.</li>
+                    <li><u>If-Else Statement</u>: conditional statements; if some condition is met then the program will do something. If the condition is not met, the program will do something else.</li>
+                    <li><u>While Loops</u>: iterative functions that can repeat until some condition is met.</li>
+                    <li><u>Lists</u>: structure data that can contain any combination of strings and numbers. Written in the following manner: <em>[value, value, value...]</em></li>
+                    <li><u>For Loops</u>: allow for iteration or 'scanning' across a sequence; good for locating a value in a list</li>
+                </ul>
+                <span class='style1'>Overview</span><br>
+                    While the specific programming language that is focused upon in this lesson is Python, there are general principles that can be picked out and applied to nearly all types of computer programming languages.
+                    <ol>
+                        <li>Formatting matters! Whether it be indenting or use of brackets, correct formatting is essential for a program to run</li>
+                        <li>Larger problems should be broken down into smaller components! It's easier to figure out a problem in a step wise fashion rather than trying to solve it all at once.</li>
+                        <li>Make sure the variable names are meaningful so that you know what they are there for.</li>
+                        <li>Remember to make use of comments!</li>
+                        <li>There is usually more than one way to go about solving a problem. The first solution that you come up with might work but it also might not be the best solution possible. Typically, simpler is better when it comes to programming.</li>
+                    </ol>
+                 <p class="ts"><a href="#begin_stage2">Back to the beginning of Stage 2</a></p>    
+            </div>    
+
+        </div>
+    </div>
+    <p class="ts">
+    <a href="\"><img src="images/home.jpg" width="50" alt="This is the link to the home page."><br>Back to home page.</a>
+    </p>
+{% endblock %}

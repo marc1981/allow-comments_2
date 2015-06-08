@@ -1,0 +1,180 @@
+{% extends "base_form.html" %}
+
+{% block content %}
+            
+<div>   
+    <div class="stage3_element_box">
+        <a id="begin_stage3"></a>
+        <div class="stage3_title_box">
+            <h2 class="subtitle">Stage 3: The Power of Abstraction</h2>
+
+        </div>
+    </div>
+    <div class="stage3_elements">
+        <div class="stage3_title">
+            Lesson 1: The Fundamentals of Object Oriented Programming
+        </div>
+        <div class="stage3_material">
+            <span class="style1">Key Terms</span><br><br>
+            These are the key terms that were gone over in great detail throughout Stage 3's instruction/educational videos. Click on a term to be taken to its definition.<br><br>
+             
+                <table class="table_details_s3">
+                    <tr>
+                        <td><a href="#OOP" class="cht">Object Oriented Programming</a></td>
+                        <td><a href="#abstraction" class="cht">Abstraction</a></td>
+                        <td><a href="#module" class="cht">Module</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#library" class="cht">Library</a></td>
+                        <td><a href="#class" class="cht">Class</a></td>
+                        <td><a href="#object" class="cht">Object</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#instance" class="cht">Instance</a></td>
+                        <td><a href="#method" class="cht">Method</a></td>
+                        <td><a href="#cv" class="cht">Class Variable</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#cm" class="cht">Class Method</a></td>
+                        <td><a href="#iv" class="cht">Instance Variable</a></td>
+                        <td><a href="#im" class="cht">Instance Method</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#constructor" class="cht">Constructor</a></td>
+                        <td><a href="#inheritance" class="cht">Inheritance</a></td>
+                        <td><a href="#method_ov" class="cht">Method Overriding</a></td>
+                        
+                    </tr>
+                </table>
+            
+               <br><br>
+            <span class="style1">Definitions</span><br>
+            <p class="defs">
+            <a id="abstraction"><b>Abstraction - </b></a>a way of managing a program's complexity by relying on multiple layers functions or "hidden functions." These hidden functions run behind the scenes in that they operate outside the view of the user. In Python and many other programming languages abstraction is dependent on prebuilt <a href="#module">modules</a>. These interact and exert direct influence on other compartmentalized aspects of the program. Abstraction simplifies programming, because it allows the programmer to focus on the task at hand rather than writing additional code. 
+            <br></p>
+            <p class="defs">
+            <a id="class"><b>Class - </b></a>a prototype or generalized concept that is used to create <a href="#object">objects</a>. In other words, a class contains the attributes (both variables and <a href="#method">methods</a>) that describe an object. A class is often likened to a blueprint, although the analogy to a recipe works equally as well. For example, a recipe for a cake lists the ingredients and instructions on how to bake it. The recipe is a prototype for a cake, and from it many cakes can be made.</p><span class="recipe_text">Recipe is to Class as Cake is to Object</span><div id="imageseries">
+            <img src="images/recipe_clipart.jpg" id="recipe" alt="This should be a clipart image of a recipe."><img src="images/arrow.png" id="arrow" alt="This should be an arrow."><img src="images/cake_clipart.jpeg" id="cake" alt="This should be an image of a cake."></div>
+            
+            <div class="clear"></div>
+            <p class="defs">
+            <a id="cm"><b>Class Method - </b></a>a function that is defined in a class and is therefore <a href="#inheritance">inherited</a> by any object that is created from the class or any subclasses that are influenced by the superclass.
+            <br></p>
+            <p class="defs">
+            <a id="cv"><b>Class Variable - </b></a>a variable (particular data type) that is defined in a class and is passed on to all objects created from it.
+            <br></p>
+            <p class="defs">
+            <a id="constructor"><b>Constructor - </b></a>also know as an initiation method (in Python written as <span class="python_code">__i__( )</span>), it creates space in memory for the instance of a class.
+            <br></p>
+            <p class="defs">
+            <a id="inheritance"><b>Inheritance - </b></a>the acquisition of attributes from a "parent" class. Classes can be arranged in a hierarchical fashion so that the higher class passes on attributes to anything below it, whether it be other classes or a single instance of that class. While this description is geared more towards Python programming, inheritance occurs elsewhere in the computer world. For example, in HTML attributes can be inherited due to nesting. If one <span class="h_code">&lt;div&gt; </span>class is nested inside another <span class="h_code">&lt;div&gt; </span>class the nested class will acquire the attributes assigned to the higher class. To further illustrate, here is an actual (but ridiculously simplified) example of nested HTML code that shows inheritance. My apologies for the small sized text.<br></p>
+            <div class="nested_inheritance">
+                <img src="images/html_inheritance.png" id="html_nested" alt="This is nested HTML code."><img src="images/nested_screen.png" id="nested_screen" alt="This image shows inheritance.">
+            </div>
+
+            <div class="clear"></div>
+            
+            <p class="defs">
+            <a id="instance"><b>Instance - </b></a>also known as an <a href="#object">object</a>. This can be thought of as the actualization of a <a href="#class">class</a>, or a unique copy of a class. An instance contains all of the attributes defined in the class model. In our recipe-cake analogy, an instance is like a single cake created from the master recipe. An instance is created when the constructor method (<span class="python_code">__i__( )</span>) is called. For example:</p>
+            <div class="instance_screen">
+                <img src="images/python_screen_method.png" id="method_screen" alt="This should be a screen shot of Python Code showing how instances are created.">
+            </div>
+            <div class="clear"></div>
+            In this Python program, an instance of the class "Movie" can be created. The constructor method (function) has several attributes, but the first attribute is one called "self." Self refers to the actual instance of the class and acts as a stand-in for all potential instances of the class.
+            <br>
+            <p class="defs">
+            <a id="im"><b>Instance Method - </b></a>a method that is assigned to an object (instance) when it is created and is defined in the class attributes. 
+            <br></p>
+            <p class="defs">
+            <a id="iv"><b>Instance Variable - </b></a>a variable that is assigned only to one particular object (instance) of a class. 
+            <br></p>
+            <p class="defs">
+            <a id="library"><b>Library - </b></a>a collection of <a href="#module">modules</a> that can be drawn from in order to simplify the programming code. In addition to <img src="images/py.png" class="mini_logo" alt="These are small pythons."><a href="https://docs.python.org/2/library/" target=_blank>Python's Standard Library</a><img src="images/py.png" class="mini_logo" alt="These are small pythons."> there are many other open-access libraries available.
+            <br></p>
+            <p class="defs">
+            <a id="method"><b>Method - </b></a>a function that belongs to and is defined by a class
+            <br></p>
+            <p class="defs">
+            <a id="method_ov"><b>Method Overriding - </b></a>a process that takes place in the context of <a href="#inheritance">inheritance</a>. In method overriding, a method (function) of a subclass (child class) takes precedent over the method of the superclass (parent class). In other words, the subclass overrides the superclass and disrupts inheriting its method.
+            <br></p>
+            <p class="defs">
+            <a id="module"><b>Module - </b></a>prewritten code that can itself be considered a partially executable program that becomes fully operational when imported into another program. The line that begins with <span class="import_orange">import</span> is used to do this. 
+            <br></p>
+            <p class="defs">
+            <a id="object"><b>Object - </b></a>also known as an <a href="#instance">instance</a>. This can be thought of as the actualization of a <a href="#class">class</a>, or a unique copy of a class. An instance contains all of the attributes defined in the class model. In our recipe-cake analogy, an instance is like a single cake created from the master recipe. 
+            <br></p>
+            <p class="defs">
+            <a id="OOP"><b>Object Oriented Programming - </b></a>Seeing that OOP is what Stage 3 is all about, I really think that it deserves its own lesson section. So that's what the next lesson is: a breakdown of what OOP is all about. 
+            <br></p>
+            
+            <p class="ts"><a href="#begin_stage3">Back to the beginning of Stage 3</a></p>
+
+        </div>
+        
+        <div class="stage3_title">
+            Lesson 2: A Closer Look at Object Oriented Programming
+        </div>
+        <div class="stage3_material">
+            <span class="style1">What is Object Oriented Programming, and why is it useful?</span><br><br>
+
+            <p class="stage3p">
+                Object Oriented Programming (OOP) is a modular approach to programming that is based, appropriately enough, on <a href="#object">objects</a>. One of its hallmarks is its use and reuse of modules, a concept known as re-usability. Re-usability greatly increases the productiveness of a program in that he or she does not have rewrite the same code over and over again.
+                <br>
+            </p>
+            <p class="stage3p">
+                Another key aspect of OOP is that objects are arranged in hierarchies, thereby allowing for the condition known as <a href="#inheritance">inheritance</a>. That is to say, OOP's design structure allows for the attributes of a higher element (class) to be imposed upon lower elements within the same grouping. Think of it like a good king ruling over his kingdom and passing along his goodness to his subjects who thereby also are good (that's a lot of goodness going on).
+                <br>
+            </p>
+            <p class="stage3p">
+                OOP also employs encapsulation, meaning that individual modules are dedicated to specific tasks and can interact with one another without necessarily affecting (altering) the contents of one another. This is sort of like a form of data protection and is known as <em>information hiding</em>.
+                <br>
+            </p>
+            <p class="stage3p">
+                With class-based programming languages like Python, objects are created from classes using methods known as <a href="#constructor">constructors</a>. In this sense, objects are <em>instances</em> of classes and are sometimes referred to as simply <a href="instance">instances</a>. Constructors make space in memory for the creation of an instance of a class. 
+
+            </p>
+            <hr class="lesson_break3">
+            <p class="stage3p">
+                So to summarize, OOP has these key features:
+            </p>
+                    <div class="stage3list">
+                    <ul>
+                        <li>modular in nature
+                            <ul>
+                                <li>allows for re-use of pre-packaged code</li>
+                                <li>makes programming faster and easier (in theory)</li>
+                                <li>increases readability of code</li>
+                            </ul>
+                        </li>
+                        <li>arranged in hierarchies
+                            <ul>
+                                <li>allows for the condition known as inheritance</li>
+                                <li>method overriding can be implemented so that a subclass retains its attributes (disrupts inheritance)</li>
+                            </ul>
+                        </li>
+                        <li>employs encapsulation
+                            <ul>
+                                <li>prevents individual modules from altering one another due to information hiding</li>
+                                <li>part of what being modular means</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+            
+            <hr class="lesson_break3">
+            
+                <div class="subdifferent">And now for something that sums up my interactions with computers.</div>
+                <iframe id="hal" width="420" height="315" src="https://www.youtube.com/embed/9W5Am-a_xWw" allowfullscreen></iframe>
+            
+
+            <p class="ts">
+                <a href="#begin_stage3">Back to the beginning of Stage 3</a>
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <p class="ts">
+    <a href="\"><img src="images/home.jpg" width="50" alt="This is the link to the home page."><br>Back to home page.</a>
+    </p>
+{% endblock %}

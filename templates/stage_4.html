@@ -1,0 +1,554 @@
+{% extends "base_form.html" %}
+
+{% block content %}
+
+	<div class="stage4_element_box">    
+            <div class="stage4_title_box">
+                <a id="top_of_stage_four"></a>
+                <h2 class="subtitle">Stage 4: Templates and Modifications</h2>
+                <div class="stage4_selection"><a href="#lesson4notes">Go to Lesson Notes</a></div>
+                <div class="stage4_selection"><a href="#lesson4form">Go to Form Example</a></div>
+            </div>
+     </div>
+			<div class="stage4_elements">
+				<div class="stage4_title">                    
+					<a id="lesson4notes"></a>
+					Lesson Notes
+				</div>
+			<div class="stage4_material">
+				<div class="lesson_div1"><a href="#net">Network Basics</a></div>
+				<div class="lesson_div2"><a href="#form">Form Basics</a></div>
+				<div class="lesson_div"><a href="#m_and_d">Modulos and Dictionaries</a></div>
+				<div class="lesson_div"><a href="#gpm">GET and POST Methods</a></div>
+				<div class="lesson_div2"><a href="#valid">Validation</a></div>
+				<div class="lesson_div2"><a href="#temps">Templates</a></div>
+				<div class="lesson_div2"><a href="#databases">Databases</a></div>
+				<div class="clear"></div>
+</div>
+				<div class="stage4_material">
+					<div class="subtitles"><a id="net">Network Basics</a></div>
+						<div class="lesson_background">
+							Networks: A group of entities that can communicate, even though they are not all directly connected.
+							<br><br>
+							Measuring Networks:
+								<blockquote>Latency: The time it takes for a message to get from a source to its destination.
+										 <blockquote>Latency can be decreased by:<ol>
+										 							 <li> increasing distance between signalling nodes </li>
+																	 <li> increasing the rate at which the messages are sent </li>
+																	 <li> increasing the speed that the messages can travel</li>
+																	</ol>
+																</blockquote></blockquote>
+								<blockquote>Bandwith: The amount of information that can transmitted per unit of time in terms of internet bandwith it is measured in bits per second (Mbps, million bits per second).
+										  	<blockquote>
+												<div id="bandbox">
+													<div id="band_tag">Test Your Own Bandwidth by clicking on the meter below.<br>
+														<em>(external site)</em></div>
+												<a href="http://www.cnet.com/internet-speed-test/"><img id="bandwidth" src="images/bandwidth.png" alt="bandwith meter"></a>
+												</div>
+											</blockquote></blockquote>
+							Making a Network: <blockquote>Need a way to encode and interpret messages.<br>
+											  Need a way to route or send messages.<br>
+											  Need rules for deciding who gets to use resources (who had precedence or priority).
+													</blockquote>
+							Protocol: <blockquote>Gives rules on how servers and clients communicate.<br>
+									  On the web, the protocol is HTTP (hypertext transfer protocol).<br>
+									  The client (web-browser) puts in a request (a "GET" command) to the server.
+									  </blockquote>
+
+							Uniform Resource Locator (URL): Is comprised of a protocol, a host, and a path. For example:
+								<blockquote>http://www.udacity.com/cs253x/hipmunk.png<br>
+								Protocol = http<br>
+								Host = www.udacity.com<br>
+								Path = /cs253x/hipmunk.png</blockquote>
+								
+								<blockquote>URLs can also contain query parameters (GET parameters). For example:</blockquote>
+								<blockquote>http://example.com/foo?p=1&z=2<br>
+								Name = value<br>
+								First query parameter is designated by a "?"<br>
+								All other query parameters are designated by an "&"</blockquote>
+								<blockquote>URLs can also contain fragments. For example:<br>
+								http://www.example.com/foo#fragment<br>
+								Fragments usually reference a part of a page (not sent to server).<br>
+								Fragments follow query parameters.</blockquote>
+								
+							HTTP Request: Request line: <blockquote>GET?/foo?p=1 HTTP/1.1<br>
+														Method/Path  Protocol Version<br>
+														Request lines are followed by headers.<br>
+														Name: value<br>
+														For example:<br>
+														<blockquote>GET?/foo?p=1 HTTP/1.1<br>
+														Host: www.example.com<br>
+														User-Agent: chrome</blockquote></blockquote>
+							
+							HTTP Response:<blockquote> User makes request, server makes response.<br>
+										   The purpose of a server is to respond to a HTTP request.
+													<blockquote>Static Requests: pre-written files
+																	 images
+													Dynamic Requests: made on the fly, built by web applications</blockquote>
+											Response: Status Line:
+														<blockquote>HTTP/1.1 200 OK<br>
+																Status Codes: <ul><li>200 Ok</li>
+																			  <li>302 Found</li>
+																			  <li>404 Not found (User side error)</li>
+																			  <li>500 Server Error (Server side error)</li></ul></blockquote>
+													  Response Headers:
+																<ul>
+																	<li>Date: Tue Mar 2012 04:33:33GMT</li>
+																	<li>Server: Apache/2.2.3</li>
+																	<li>Content-Type: text/html;</li>
+																	<li>Content-Length: 1539</li>
+																</ul></blockquote>
+		  				</div>
+					
+					<br>
+	 				<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+	 				<div class="page4_break_down"></div>
+	 				<div class="page4_break_up"></div><br><br>
+	 				<div class="subtitles"><a id="form">Form Basics</a></div><br>
+	 				<div class="lesson_background">
+	 				Forms use the tags: &lt;form&gt; &lt;/form&gt;<br><br>
+		An example of the type of content that can go into a form is &lt;input type=&quot;text&quot; name=&quot;q&quot;&gt;<br><br> 
+		To include a submit button use the following: &lt;input type=&quot;submit&quot;&gt;<br><br>
+				<blockquote>&lt;form&gt;
+					<blockquote>&lt;input type=&quot;text&quot; name=&quot;q&quot;&gt;<br><br>
+					&lt;input type=&quot;submit&quot;&gt;</blockquote>
+				&lt;/form&gt;</blockquote><br>
+			More forms:	
+				<blockquote>&lt;form&gt;
+					<blockquote>&lt;input type=&quot;checkbox&quot; name=&quot;q&quot;&gt;<br><br>
+					&lt;input type=&quot;checkbox&quot; name=&quot;r&quot;&gt;<br><br>
+					&lt;input type=&quot;checkbox&quot; name=&quot;s&quot;&gt;<br><br>
+					&lt;input type=&quot;submit&quot;&gt;</blockquote>
+				&lt;/form&gt;</blockquote>
+				Submitting this gives the following type of query parameter: q=on&amp;r=on<br><br>
+				
+				<blockquote>&lt;form&gt;
+					<blockquote>&lt;label&gt;
+						<blockquote>Red<br><br>
+						&lt;input type=&quot;radio&quot; name=&quot;q&quot; value=&quot;red&quot;&gt;</blockquote>
+					&lt;/label&gt;</blockquote>
+					<blockquote>&lt;label&gt;
+						<blockquote>Blue<br><br>
+						&lt;input type=&quot;radio&quot; name=&quot;q&quot; value=&quot;blue&quot;&gt;</blockquote>
+					&lt;/label&gt;</blockquote>
+					<blockquote>&lt;label&gt;
+						<blockquote>Green<br><br>
+						&lt;input type=&quot;radio&quot; name=&quot;q&quot; value=&quot;green&quot;&gt;</blockquote>
+					&lt;/label&gt;</blockquote>
+					<blockquote>&lt;input type=&quot;submit&quot;&gt;</blockquote>
+				&lt;/form&gt;</blockquote>
+				Submitting this gives the following type of query parameter: q=red<br><br>
+				
+				<blockquote>&lt;form&gt;
+					<blockquote>&lt;select name=&quot;q&quot;&gt;
+						<blockquote>&lt;option&gt;One&lt;/option&gt;<br><br>
+						&lt;option&gt;Two&lt;/option&gt;<br><br>
+						&lt;option&gt;Three&lt;/option&gt;</blockquote>
+					&lt;/select&gt;</blockquote>
+					<blockquote>&lt;input type=&quot;submit&quot;&gt;</blockquote>
+				&lt;/form&gt;</blockquote>
+		The attribute called &quot;action&quot; controls where a form submits to (by default the form submits to itself). For example:
+				<blockquote>&lt;form action=&quot;http://www.google.com/search&quot;&gt;
+					<blockquote>&lt;input type=&quot;text&quot; name=&quot;q&quot;&gt;<br><br>
+					&lt;input type=&quot;submit&quot;&gt;</blockquote>
+				&lt;/form&gt;</blockquote>
+
+					<br><br>
+			</div>
+					
+					<br>
+	 				<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+	 				
+	 				<div class="page4_break_down"></div>
+					<div class="page4_break_up"></div><br><br>
+
+					<div class="subtitles"><a id="m_and_d">Modulos and Dictionaries</a></div><br>
+						<div class="lesson_background">
+							modulo operator: %<br>
+									<blockquote>this operator returns the remainder after division<br>
+									for example: <blockquote>15 % 12 = 3<br><br>
+									 	15 % 11 = 4<br><br>
+										4 % 3 = 1<br><br>
+									 	3 % 4 = 3</blockquote></blockquote>
+				 
+							Strings, Lists, and Dictionaries<br>
+									<blockquote>Strings: 'hello' - sequence of characters, immutable<br>
+											<blockquote>s[i] returns ith character in s</blockquote>
+									<blockquote>Lists: ['alpha', 123, 47, 'cow'] - list of elements, mutable<br>
+											p[i] returns ith element of p<br><br>
+											p[i] = u replaces the ith element of p with u</blockquote>
+									<blockquote>Dictionaries: {'brother': 'Greg', 'father': Tom} - set of &lt;key: value&gt; pairs, mutable
+												<blockquote>d[k] returns value associated with k (key) in d</blockquote>
+									</blockquote>
+						</div>
+					<br>
+	 				<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+		
+	 		<div class="page4_break_down"></div>
+	 		<div class="page4_break_up"></div><br><br>
+
+	 				<div class="subtitles"><a id="gpm">GET and POST Methods</a></div><br>
+	 					<div class="lesson_background">
+	 						The two most common request-response methods in HTTP are: GET and POST
+								<blockquote>GET - requests data from a specific source, used for fetching data<br>
+								POST - submits data to be processed, used for updating data</blockquote>
+						<br>
+					GET Method
+						<ul>
+							<li>query strings are sent in the URL of a GET request (http://www.testform.com/demo?q=1&p=2)</li>
+							<li>GET requests can be cached and remain in the browser history</li>
+							<li>GET requests can be bookmarked</li>
+							<li>Because they are sent via the URL, GET requests are limited in the number of characters they can contain</li>
+							<li>GET requests should not be used to with sensitive data, and, ideally, they should only be used to retrieve data</li>
+						</ul>
+						<br>
+
+					POST Method
+					<ul>
+						<li>query strings are sent in the HTTP message body of a POST request</li>
+						<li>POST requests are not cached and do not remain in the browser history</li>
+						<li>POST requests cannot be bookmarked</li>
+						<li>POST requests are not limited in the number of characters they can contain</li>
+					</ul>
+					<br>
+					<br>
+	 						<table class="GPTable">
+	 							<caption>Comparing GET vs POST</caption>
+	 							<tr>
+	 								<th></th>
+	 								<th>GET</th>
+	 								<th>POST</th>
+	 							</tr>
+	 							<tr>
+	 								<td>Back button/Reload</td>
+	 								<td>Harmless</td>
+	 								<td>Data will be resubmitted, and the browser usually gives an alert</td>
+	 							</tr>
+	 							<tr>
+	 								<td>Bookmarking</td>
+	 								<td>Yes</td>
+	 								<td>No</td>
+	 							</tr>
+	 							<tr>
+	 								<td>Cached</td>
+	 								<td>Yes</td>
+	 								<td>No</td>
+	 							</tr>
+	 							<tr>
+	 								<td>Query Strings</td>
+	 								<td>Placed in URL</td>
+	 								<td>Sent in HTTP message body</td>
+	 							</tr>
+	 							<tr>
+	 								<td>History</td>
+	 								<td>Parameters remain in browser history</td>
+	 								<td>Parameters not saved in browser history</td>
+	 							</tr>
+	 							<tr>
+	 								<td>Data Restrictions</td>
+	 								<td>Yes, because length of URL is limited (usually 2048 characters) and only ASCII characters are allowed</td>
+	 								<td>No restrictions (length restrictions can be placed by administrator)</td>
+	 							</tr>
+	 							<tr>
+	 								<td>Security</td>
+	 								<td>Data is visible to everyone, because it is located in the URL</td>
+	 								<td>Data is not visible to users and is not stored on users' computer</td>
+	 							</tr>
+	 						</table>
+
+	 						<br>
+	 						<br>
+	 					</div>
+	 				<br>
+	 				<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+		
+			 		<div class="page4_break_down"></div>
+			 		<div class="page4_break_up"></div><br><br>
+
+	 				<div class="subtitles"><a id="valid">Validation</a></div><br>
+	 					<div class="lesson_background">
+	 						<div class="valid_image">
+	 							<img src="images/validation.svg" alt="validation process">
+	 						</div>
+	 						<div>
+	 							<u>Validation</u>: verify on the server side that the data received is what was expected; makes sure that the server can handle all kinds of "junk" parameters.<br>
+								<ol>
+									<li>Verify user's input</li>
+									<li>If error, render form again</li>
+									<li>Include error message to inform user</li>
+								</ol>
+								<br>
+								<u>Escaping</u>: ensures that the data entered by user does not alter HTML.
+									<blockquote>For example, typing &lt;b&gt;words&lt;/b&gt; into an input box could change the HTML.<br>
+									Certain characters shouldn't be allowed in input boxes.
+										<blockquote>" renders as &amp;quot;<br>
+										&gt; renders as &amp;gt;<br>
+										&lt; renders as &amp;lt;<br>
+										&amp; renders as &amp;amp;</blockquote>
+									</blockquote>
+
+								<p><u>Validation and escaping</u> are essential for making sure user input is handled properly and that any input doesn't alter the HTML itself. Validation also informs the user if there's an error with their data input and usually offers them a chance to correct the mistake. In other words, validation puts constraints on the type or amount of input that can be submitted to the servers by a user. Escaping is more about protecting the HTML from deliberate or accidental tampering/alterations. Without escaping, certain characters can be interpreted as HTML code, thereby making the actual page display improperly (or worse).</p>
+
+	 						</div>
+
+	 					</div>
+	 					<br>
+	 				<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+		
+						 		<div class="page4_break_down"></div>
+						 		<div class="page4_break_up"></div><br><br>
+
+	 				<div class="subtitles"><a id="temps">Templates</a></div><br>
+	 					<div class="lesson_background">
+	 						<div class="valid_image">
+	 							<img src="images/templates.svg" alt="templates">
+	 						</div>
+	 						<u>Templates</u>:
+	 								<blockquote>
+	 								<ul>
+									<li>A template library is a library to build complicated strings (HTML).</li>
+										<br>
+									<li>jinja2 is a template library that is built into Google App Engine.</li>
+										<br>
+									<li>Templates simplify code, in that their use avoids repeating the same lines over and over.<br>
+									This minimizes the chance of writing an error, or, if there is an error, makes it easier to find and correct.<br>
+									Ultimately, templates make the code more readable.</li>
+										<br>
+									<li>In addition, templates allow a python program to contain almost exclusively python code, and the HTML code can be contained in templates that are associated with the .py program.</li>
+									<br>
+									<li>Multiple pages from a website can inherit templates or parts of templates.<br>
+										For example, each page can have the same header and footer, each supplied by a template.<br>
+										<div class="temp"><img src="images/tempexample.png" alt="template example"></div>
+										</li>
+
+									</ul>
+									</blockquote>
+	 					</div>
+	 					<br>
+	 				
+	 				<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+		
+						 		<div class="page4_break_down"></div>
+						 		<div class="page4_break_up"></div><br><br>
+
+	 				<div class="subtitles"><a id="databases">Databases</a></div><br>
+	 					<div class="lesson_background">
+
+	 						<u>Databases</u>:
+
+							<blockquote>A program that stores and retrieves large amounts of structured data.
+								<ul>
+									<li>can refer to the program itself</li>
+									<li>can refer to the machine (server) running the program</li>
+									<li>can refer to a group of machines working together to run the database program</li>
+								</ul>
+							</blockquote>
+	
+							<blockquote>One of the features that most databases share is that data is stored in tables.
+								<ul>
+									<li>generally every row will have some form of ID</li>
+									<li>multiple tables can related to one another by elements they have in common</li>
+								</ul>
+							</blockquote>
+
+							<blockquote>Data can be queried by "hand," but...
+								<ul>
+									<li>this process is error prone</li>
+									<li>this process is tedious</li> 
+									<li>this process is slow</li>
+								</ul>
+							</blockquote>
+
+							<blockquote>Types of databases:
+								<ul>	
+									<li>relational (SQL - structured query language)</li>
+									<li>Google App Engine's Datastore</li>
+									<li>Amazon's Dynamo</li>
+									<li>NoSQL (mongo, couch)</li>
+								</ul>
+							</blockquote>
+
+							<blockquote>SQL - Structured Query Language
+								<blockquote>basic SQL query: select * FROM links WHERE id = 5;
+									<ul>
+									   	<li><em>select</em> - "fetch data"</li> 
+									   	<li><em>*</em> - all columns selector</li> 
+									   	<li><em>links</em> - table that you are selecting from</li> 
+									   	<li><em>WHERE id = 5</em> - constraints on query</li> 
+									</ul>
+								</blockquote>
+							</blockquote>
+	 					</div>
+	 					<br>
+	 				
+	 					<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p><br>
+	 				
+	 				</div>
+	 						
+				
+
+				<div class="stage4_title">                    
+					Applying the Lesson Material:<br>
+					A Functional Form.
+					<a id="lesson4form"></a>
+				</div>
+				<div class="stage4_material">
+					<a id="form_start"></a>
+					<div class="form_title">Choose Your Favorite Color.</div>
+				<div class="form_container">
+					
+					<form id="validationForm" action="/select?colorbook_name={{ colorbook_name }}" method="post">
+
+				      First enter your name then make your color selection.<br><br>
+				      <div>Your Name (optional): <input type="text" name="author"></div>
+				      <p>Select your favorite color!</p>
+				      <input type="radio" name="color" value="Red"/>Red
+				      <input type="radio" name="color" value="Orange"/>Orange
+				      <input type="radio" name="color" value="Yellow"/>Yellow
+				      <input type="radio" name="color" value="Green"/>Green
+				      <input type="radio" name="color" value="Blue"/>Blue
+				      <input type="radio" name="color" value="Purple"/>Purple
+				      <input type="radio" name="color" value="Black"/>Black
+				      <br><br>
+	      			  <input type="radio" name="color" value="Other"/>Other/Not-listed
+	     			 <br>
+
+	     			 <br><br>
+				      <div><br><input type="submit" value="Submit your choice."></div>
+				    </form>
+				    
+				</div>
+				<div id="erratum"></div>
+				<div class="error_space">
+	      					{% if greetings %}
+	      					    {% for greeting in greetings %}
+	      							{% if greeting.color == '' %}
+	      							  <p class="warning">Please make a selection.</p>
+	      							{% elif greeting.color == 'Red' %}
+							          <p class="warning"><span class="remove">.</span></p>
+							        {% elif greeting.color == 'Blue' %}
+							          <p class="warning"><span class="remove">.</span></p>
+							        {% elif greeting.color == 'Green' %}
+							          <p class="warning"><span class="remove">.</span></p>
+							        {% elif greeting.color == 'Purple' %}
+							          <p class="warning"><span class="remove">.</span> </p>
+							        {% elif greeting.color == 'Yellow' %}
+							          <p class="warning"><span class="remove">.</span></p>
+							        {% elif greeting.color == 'Orange' %}
+							          <p class="warning"><span class="remove">.</span></p>
+							        {% elif greeting.color == 'Black' %}
+							          <p class="warning"><span class="remove">.</span></p>
+							        {% elif greeting.color == 'Other' %}
+							          <p class="warning"><span class="remove">.</span></p>
+	      							{% endif %}
+	      						{% endfor %}
+	      					{% endif %}	
+	      				</div>
+			    <a id="begin_form"></a>
+			    <hr>
+
+			    <p>This is the most<br> recent selection.</p>
+			    <div class="option_area">
+			    <img src="images/down_arrow.png" height="45px" id="darrow" alt="this a downward facing arrow">
+			    <br>
+			    {% if greetings %}
+
+			      {% for greeting in greetings %}
+			      
+			        {% if greeting.color == 'Red' %}
+			          <div id="red_square"></div>
+			        {% elif greeting.color == 'Blue' %}
+			          <div id="blue_square"></div>
+			        {% elif greeting.color == 'Green' %}
+			          <div id="green_square"></div>
+			        {% elif greeting.color == 'Purple' %}
+			          <div id="purple_square"></div>
+			        {% elif greeting.color == 'Yellow' %}
+			          <div id="yellow_square"></div>
+			        {% elif greeting.color == 'Orange' %}
+			          <div id="orange_square"></div>
+			        {% elif greeting.color == 'Black' %}
+			          <div id="no_square"></div>
+			        {% elif greeting.color =='' %}
+			        	<div id="empty_square"></div>
+			        {% else %}
+			          <div id="default_square"><div id="color_w">Personal favorite</div></div>
+			        {% endif %}
+			      
+			      {% endfor %}
+			        <br>
+			        <br>
+			        <br>
+			    </div> 
+			       <hr>
+
+			      {% for greeting in greetings %}
+			      	{% if greeting.color != '' %}
+				        {% if greeting.author == '' %}
+				        	Someone who didn't want to give his or her name chose:
+				        	{% if greeting.color != '' %}
+				        		{% if greeting.color == 'Red' %}
+									<blockquote>{{ greeting.color }} - Little red Corvette. Baby you're much too fast.</blockquote>
+								{% elif greeting.color == 'Orange' %}
+									<blockquote>{{ greeting.color }} - Oranges and lemons, say the bells of St. Clement's.</blockquote>
+								{% elif greeting.color == 'Yellow' %}
+									<blockquote>{{ greeting.color }} - We all live in a yellow submarine.</blockquote>
+								{% elif greeting.color == 'Green' %}
+									<blockquote>{{ greeting.color }} - It's not easy being green.</blockquote>
+								{% elif greeting.color == 'Blue' %}
+									<blockquote>{{ greeting.color }} - Well I guess that's why they call it the blues.</blockquote>
+								{% elif greeting.color == 'Purple' %}
+									<blockquote>{{ greeting.color }} - That's my favorite color too! Oh yeah, Purple Rain, Purple Rain.</blockquote>
+								{% elif greeting.color == 'Black' %}
+									<blockquote>{{ greeting.color }} - Black hole sun, won't you come and wash away the rain?</blockquote>
+								{% elif greeting.color == 'Other' %}
+									<blockquote>{{ greeting.color }} - I'm sure whatever color they had in mind is a nice color.</blockquote>
+				        		{% endif %}
+
+				        	{% else %}
+				        		<blockquote></blockquote>
+				        	{% endif %}
+				        {% else %}
+				        	<b>{{ greeting.author }}</b> chose:
+				        	{% if greeting.color != '' %}
+				        		{% if greeting.color == 'Red' %}
+									<blockquote>{{ greeting.color }} - Little red Corvette. Baby you're much too fast.</blockquote>
+								{% elif greeting.color == 'Orange' %}
+									<blockquote>{{ greeting.color }} - Oranges and lemons, say the bells of St. Clement's.</blockquote>
+								{% elif greeting.color == 'Yellow' %}
+									<blockquote>{{ greeting.color }} - We all live in a yellow submarine.</blockquote>
+								{% elif greeting.color == 'Green' %}
+									<blockquote>{{ greeting.color }} - It's not easy being green.</blockquote>
+								{% elif greeting.color == 'Blue' %}
+									<blockquote>{{ greeting.color }} - Well I guess that's why they call it the blues.</blockquote>
+								{% elif greeting.color == 'Purple' %}
+									<blockquote>{{ greeting.color }} - That's my favorite color too! Oh yeah, Purple Rain, Purple Rain.</blockquote>	
+				        		{% elif greeting.color == 'Black' %}
+									<blockquote>{{ greeting.color }} - Black hole sun, won't you come and wash away the rain?</blockquote>
+								{% elif greeting.color == 'Other' %}
+									<blockquote>{{ greeting.color }} - I'm sure whatever color they had in mind is a nice color.</blockquote>
+				        		{% endif %}
+					        	{% else %}
+				        		<blockquote></blockquote>
+				        	{% endif %}
+				        {% endif %}
+				       {% endif %}
+				      {% endfor %}
+				    {% endif %}
+			<br>
+			<br>
+			<br>
+	 		<p class="ts"><a href="#top_of_stage_four">Back to the beginning of Stage 4</a></p>	
+		</div>
+    </div>  	
+    </div>
+    </div>
+    	<p class="ts">
+    	<a href="\"><img src="images/home.jpg" width="50" alt="This is the link to the home page."><br>Back to home page.</a>
+    	</p>
+
+
+
+{% endblock %}
+
+<!--<blockquote><img height="120px" src="images/why_you.jpg" alt="Y U No Answer?"></blockquote>-->
